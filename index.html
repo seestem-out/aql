@@ -5,7 +5,13 @@
 }
 body{
   padding: 1em 8em
-}</style><style>
+}
+@media only screen and (max-width: 900px){
+  body{
+    padding: 1em
+  }
+}
+</style><style>
 nav {
   background-color: rgb(255,255,255);
   border: thin solid rgba(0,0,0,0.05);
@@ -23,10 +29,32 @@ nav {
 .active_nav {
   color: rgb(148,149,153) !important;
 }
+
+#MOBILE_NAVIGATION, #MOBILE_LOGO{
+  display: none;
+}
+
+@media only screen and (max-width: 663px){
+  #NAVIGATION_BAR{
+    display: none
+  }
+
+  #MOBILE_LOGO{
+    width: 80px;
+    margin: 0 auto;
+  }
+
+  #MOBILE_NAVIGATION,#MOBILE_LOGO{
+    display: block;    
+  }
+
+}
+
 #HERO {
   background-image: url("./cover.jpg");
-  height: 50vh;
+  height: 45vh;
   background-size: 100%;
+  background-repeat: no-repeat;
   padding: 4em;
 }
 
@@ -38,6 +66,7 @@ nav {
 #HEROSUBHEADING{
   color: rgb(217,217,217) !important;
   font-family: "Univers-Regular";
+  text-shadow: 1px 1px 1px #000;
 }
 
 #HEROBTN{
@@ -46,6 +75,51 @@ nav {
  background_color: rgb(255,255,255) !important;
  font-family: "Univers-Regular";
  border-radius: 0;
+}
+
+
+@media only screen and (max-width: 1183px){
+  #HERO {
+    height: 30vh; 
+  }
+
+  #HEROHEADING {
+    font-size: 1.1em;
+  }
+
+  #HERO {
+    padding: 2em;
+  }
+}
+
+@media only screen and (max-width: 397px){
+  #HERO {
+    height: 25vh;
+  }
+
+ #HEROBTN {
+    display: none;
+  }
+
+  #HEROSUBHEADING{
+    font-size: .8em;
+  }
+}
+
+@media only screen and (max-width: 335px){
+  #HERO {
+    height: 20vh;
+  }
+}
+
+@media only screen and (max-width: 274px){
+  #HERO {
+    height: 15vh;
+  }
+
+  #HEROSUBHEADING{
+    display: none
+  }
 }
 
 .basic-conent-section{
@@ -64,6 +138,13 @@ nav {
   border: thick solid rgb(0,105,151);
 }
 
+@media only screen and (max-width: 434px){
+  .basic-conent-section{
+    padding: 1em;
+  }
+  
+}
+
 .basic2-conent-section{
   padding: 1em 4em;
   padding-bottom: 4em;
@@ -79,6 +160,13 @@ nav {
   border-top-left-radius: 50px;
   border-bottom-right-radius: 50px;
   border: thick solid rgb(148,149,153);
+}
+
+@media only screen and (max-width: 434px){
+  .basic2-conent-section{
+    padding: 1em;
+  }
+  
 }
 
 #ServicesContentWidget{
@@ -106,7 +194,31 @@ nav {
 #ServicesContentWidget .card .card-title{
   color: rgb(255,255,255);
 }
-</style><body><nav class="navbar"><section class="navbar-section"><a class="btn btn-link navlink active_nav" href="./index.html">Home</a><a class="btn btn-link navlink" href="./about.html">About</a></section><section class="navbar-center"><img id="LOGO" src="./logo.jpg"></img></section><section class="navbar-section"><a class="btn btn-link navlink" href="./about.html">Services</a><a class="btn btn-link navlink" href="./about.html">Contact</a></section></nav><section id="HERO"><h3 id="HEROHEADING">Arry Quest Trading</h3><p class="col-4" id="HEROSUBHEADING">Opportunities are usually disguised as hard work, so most people don't recognize them.</p><button class="btn" id="HEROBTN">more info</button></section><section class="basic-conent-section"><h5 id="CONTENTHEADING">Executive Summary</h5><div class="columns"><p class="col-6">
+
+@media only screen and (max-width: 434px){
+  #ServicesContentWidget .card img{
+    width: 34px;
+  }
+
+  #ServicesContentWidget{
+    padding: 1em;
+  }
+
+  .card-title{
+    font-size: .8em;
+  }
+}
+
+#ContactWidget {
+  padding: 4em;
+  background-color: rgb(217,217,217);
+  font-family: "Univers-Regular";
+}
+
+.contact-containers{
+  text-align: center;
+}
+</style><body><nav class="navbar" id="NAVIGATION_BAR"><section class="navbar-section"><a class="btn btn-link navlink active_nav" href="./index.html">Home</a><a class="btn btn-link navlink" href="#CONTENT_BASIC">About</a></section><section class="navbar-center"><img id="LOGO" src="./logo.jpg"></img></section><section class="navbar-section"><a class="btn btn-link navlink" href="#ServicesContentWidget">Services</a><a class="btn btn-link navlink" href="#ContactWidget">Contact</a></section></nav><div class="text-center"><img id="MOBILE_LOGO" src="./logo.jpg"></img></div><div class="dropdown" id="MOBILE_NAVIGATION"><a class="btn btn-link dropdown-toggle" href="#"><i class="icon icon-menu"></i></a><ul class="menu"><li class="menu-item"><a class="btn btn-link navlink active_nav" href="./index.html">Home</a></li><li class="menu-item"><a class="btn btn-link navlink" href="#CONTENT_BASIC">About</a></li><li class="menu-item"><a class="btn btn-link navlink" href="#ServicesContentWidget">Services</a></li><li class="menu-item"><a class="btn btn-link navlink" href="#ContactWidget">Contact</a></li></ul></div><section id="HERO"><h3 id="HEROHEADING">Arry Quest Trading</h3><p class="col-8 col-lg-4 col-md-8" id="HEROSUBHEADING">Opportunities are usually disguised as hard work, so most people don't recognize them.</p><button class="btn" id="HEROBTN"><a href="#ServicesContentWidget">more info</a></button></section><section class="basic-conent-section" id="CONTENT_BASIC"><h5 id="CONTENTHEADING">Executive Summary</h5><div class="columns"><p class="col-6 col-sm-12">
 AQT is dynamic organization that offers a wide variety of holistic
 services, no matter the size of your organization, as we understand
 the benefits of harnessing the power of simple yet effective solutions
@@ -119,9 +231,9 @@ qualified professionals are very proactive
 and readily available to meet your needs
 and expectations. We are tightly aligned
 with your business needs.
-</p><div class="col-1"></div><div class="col-5"><img class="img-responsive" src="./office.jpg"></img></div></div></section><section class="basic2-conent-section"><div class="columns"><div class="col-6"><img class="img-responsive" src="./white-bg.jpg"></img></div><div class="col-1"></div><div class="col-5"><h5 id="CONTENTHEADING">Our Mission</h5><p>Our mission is to have a positive, long-lasting
+</p><div class="col-1"></div><div class="col-5 col-sm-12"><img class="img-responsive" src="./office.jpg"></img></div></div></section><section class="basic2-conent-section"><div class="columns"><div class="col-6 col-sm-12"><img class="img-responsive" src="./white-bg.jpg"></img></div><div class="col-1"></div><div class="col-5 col-sm-12"><h5 id="CONTENTHEADING">Our Mission</h5><p>Our mission is to have a positive, long-lasting
 effect and relationship with all our clients by rendering solutions
 and providing our customers with high quality services, tailor-made
 to their needs and expectations, while guaranteeing highly
 competitive services.
-</p></div></div></section><section id="ServicesContentWidget"><div class="columns"><div class="col-2"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/ict.png"></img></div><div class="card-header"><div class="card-title h6">Information Technology</div></div></div></div><div class="col-2"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/conversation.png"></img></div><div class="card-header"><div class="card-title h6">Consultancy Services</div></div></div></div><div class="col-2"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/security.png"></img></div><div class="card-header"><div class="card-title h6">Security &amp; Protection</div></div></div></div><div class="col-2"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/truck.png"></img></div><div class="card-header"><div class="card-title h6">Transport &amp; Logistics</div></div></div></div><div class="col-2"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/brickwall.png"></img></div><div class="card-header"><div class="card-title h6">Construction &amp; Renovations</div></div></div></div><div class="col-2"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/management.png"></img></div><div class="card-header"><div class="card-title h6">Property Development</div></div></div></div><div class="col-2"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/flash.png"></img></div><div class="card-header"><div class="card-title h6">Electrical &amp; Power Engineering</div></div></div></div><div class="col-2"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/cleaning.png"></img></div><div class="card-header"><div class="card-title h6">Hygiene &amp; Cleaning</div></div></div></div><div class="col-2"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/catering.png"></img></div><div class="card-header"><div class="card-title h6">Food &amp; Catering</div></div></div></div></div></section></body></head>
+</p></div></div></section><section id="ServicesContentWidget"><div class="columns"><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/ict.png"></img></div><div class="card-header"><div class="card-title h6">Information Technology</div></div></div></div><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/conversation.png"></img></div><div class="card-header"><div class="card-title h6">Consultancy Services</div></div></div></div><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/security.png"></img></div><div class="card-header"><div class="card-title h6">Security &amp; Protection</div></div></div></div><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/truck.png"></img></div><div class="card-header"><div class="card-title h6">Transport &amp; Logistics</div></div></div></div><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/brickwall.png"></img></div><div class="card-header"><div class="card-title h6">Construction &amp; Renovations</div></div></div></div><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/management.png"></img></div><div class="card-header"><div class="card-title h6">Property Development</div></div></div></div><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/flash.png"></img></div><div class="card-header"><div class="card-title h6">Electrical &amp; Power Engineering</div></div></div></div><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/cleaning.png"></img></div><div class="card-header"><div class="card-title h6">Hygiene &amp; Cleaning</div></div></div></div><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/catering.png"></img></div><div class="card-header"><div class="card-title h6">Food &amp; Catering</div></div></div></div></div></section><section id="ContactWidget"><div class="columns"><div class="col-3 col-sm-12 contact-containers"><h4><i class="icon icon-apps"></i></h4><h5>Phone</h5><h5>+264-851222-901</h5></div><div class="col-3 col-sm-12 contact-containers"><h4><i class="icon icon-search"></i></h4><h5>Website</h5><h5>www.arryquest.com</h5></div><div class="col-3 col-sm-12 contact-containers"><h4><i class="icon icon-mail"></i></h4><h5>Email</h5><h5>info@arryquest.com</h5></div><div class="col-3 col-sm-12 contact-containers"><h4><i class="icon icon-edit"></i></h4><h5>Postal</h5><h5>P.O.Box: 99118 Hochland Park, Windhoek Namibia</h5></div></div></section></body></head>
